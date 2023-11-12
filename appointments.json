@@ -1,0 +1,172 @@
+[
+    {
+        "model": "pets.appointment",
+        "pk": 11,
+        "fields": {
+            "pet": 1,
+            "weight": "25.5",
+            "temperature": "38.5",
+            "heart_rate": 80,
+            "breathing_frequency": 20,
+            "threw_up": false,
+            "diarrhea": false,
+            "nutrition": "balanced",
+            "reason": "Regular checkup",
+            "created": "2023-10-31T00:00:00Z",
+            "updated": "2023-10-31T00:00:00Z"
+        }
+    },
+    {
+        "model": "pets.appointment",
+        "pk": 12,
+        "fields": {
+            "pet": 1,
+            "weight": "28.3",
+            "temperature": "37.8",
+            "heart_rate": 70,
+            "breathing_frequency": 18,
+            "threw_up": false,
+            "diarrhea": false,
+            "nutrition": "barf",
+            "reason": "Vaccination",
+            "created": "2023-12-31T00:00:00Z",
+            "updated": "2023-12-31T00:00:00Z"
+        }
+    },
+    {
+        "model": "pets.appointment",
+        "pk": 13,
+        "fields": {
+            "pet": 1,
+            "weight": "20.1",
+            "temperature": "39.2",
+            "heart_rate": 85,
+            "breathing_frequency": 22,
+            "threw_up": false,
+            "diarrhea": false,
+            "nutrition": "homemade",
+            "reason": "Injury checkup",
+            "created": "2024-06-30T00:00:00Z",
+            "updated": "2024-06-30T00:00:00Z"
+        }
+    },
+    {
+        "model": "pets.appointment",
+        "pk": 14,
+        "fields": {
+            "pet": 1,
+            "weight": "26.7",
+            "temperature": "38.0",
+            "heart_rate": 75,
+            "breathing_frequency": 19,
+            "threw_up": true,
+            "diarrhea": false,
+            "nutrition": "balanced",
+            "reason": "Allergic reaction",
+            "created": "2024-12-31T00:00:00Z",
+            "updated": "2024-12-31T00:00:00Z"
+        }
+    },
+    {
+        "model": "pets.appointment",
+        "pk": 15,
+        "fields": {
+            "pet": 1,
+            "weight": "23.8",
+            "temperature": "38.9",
+            "heart_rate": 80,
+            "breathing_frequency": 20,
+            "threw_up": false,
+            "diarrhea": true,
+            "nutrition": "barf",
+            "reason": "Digestive issues",
+            "created": "2025-03-31T00:00:00Z",
+            "updated": "2025-03-31T00:00:00Z"
+        }
+    },
+    {
+        "model": "pets.appointment",
+        "pk": 16,
+        "fields": {
+            "pet": 1,
+            "weight": "27.2",
+            "temperature": "38.3",
+            "heart_rate": 70,
+            "breathing_frequency": 18,
+            "threw_up": false,
+            "diarrhea": false,
+            "nutrition": "balanced",
+            "reason": "Flea treatment",
+            "created": "2025-09-30T00:00:00Z",
+            "updated": "2025-09-30T00:00:00Z"
+        }
+    },
+    {
+        "model": "pets.appointment",
+        "pk": 17,
+        "fields": {
+            "pet": 1,
+            "weight": "29.0",
+            "temperature": "38.1",
+            "heart_rate": 65,
+            "breathing_frequency": 17,
+            "threw_up": false,
+            "diarrhea": false,
+            "nutrition": "homemade",
+            "reason": "Regular checkup",
+            "created": "2026-03-31T00:00:00Z",
+            "updated": "2026-03-31T00:00:00Z"
+        }
+    },
+    {
+        "model": "pets.appointment",
+        "pk": 18,
+        "fields": {
+            "pet": 1,
+            "weight": "24.5",
+            "temperature": "38.6",
+            "heart_rate": 75,
+            "breathing_frequency": 19,
+            "threw_up": false,
+            "diarrhea": false,
+            "nutrition": "barf",
+            "reason": "Vaccination",
+            "created": "2027-03-31T00:00:00Z",
+            "updated": "2027-03-31T00:00:00Z"
+        }
+    },
+    {
+        "model": "pets.appointment",
+        "pk": 19,
+        "fields": {
+            "pet": 1,
+            "weight": "22.9",
+            "temperature": "38.7",
+            "heart_rate": 80,
+            "breathing_frequency": 20,
+            "threw_up": false,
+            "diarrhea": false,
+            "nutrition": "balanced",
+            "reason": "Injury checkup",
+            "created": "2028-03-31T00:00:00Z",
+            "updated": "2028-03-31T00:00:00Z"
+        }
+    },
+    {
+        "model": "pets.appointment",
+        "pk": 20,
+        "fields": {
+            "pet": 2,
+            "weight": "6.4",
+            "temperature": "39.1",
+            "heart_rate": 90,
+            "breathing_frequency": 25,
+            "threw_up": false,
+            "diarrhea": false,
+            "nutrition": "homemade",
+            "reason": "Regular checkup",
+            "created": "2024-04-30T00:00:00Z",
+            "updated": "2024-04-30T00:00:00Z"
+        }
+    }
+]

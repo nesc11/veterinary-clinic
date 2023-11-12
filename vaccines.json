@@ -1,0 +1,74 @@
+[
+    {
+        "model": "pets.vaccine",
+        "pk": 1,
+        "fields": {
+            "name": "Rabies Vaccine",
+            "species": 1
+        }
+    },
+    {
+        "model": "pets.vaccine",
+        "pk": 2,
+        "fields": {
+            "name": "Distemper Vaccine",
+            "species": 1
+        }
+    },
+    {
+        "model": "pets.vaccine",
+        "pk": 3,
+        "fields": {
+            "name": "Parvovirus Vaccine",
+            "species": 1
+        }
+    },
+    {
+        "model": "pets.vaccine",
+        "pk": 4,
+        "fields": {
+            "name": "Feline Leukemia Vaccine",
+            "species": 2
+        }
+    },
+    {
+        "model": "pets.vaccine",
+        "pk": 5,
+        "fields": {
+            "name": "Calicivirus Vaccine",
+            "species": 2
+        }
+    },
+    {
+        "model": "pets.vaccine",
+        "pk": 6,
+        "fields": {
+            "name": "Avian Influenza Vaccine",
+            "species": 3
+        }
+    },
+    {
+        "model": "pets.vaccine",
+        "pk": 7,
+        "fields": {
+            "name": "Canine Bordetella Vaccine",
+            "species": 1
+        }
+    },
+    {
+        "model": "pets.vaccine",
+        "pk": 8,
+        "fields": {
+            "name": "Feline Herpesvirus Vaccine",
+            "species": 2
+        }
+    },
+    {
+        "model": "pets.vaccine",
+        "pk": 9,
+        "fields": {
+            "name": "Psittacosis Vaccine",
+            "species": 3
+        }
+    }
+]

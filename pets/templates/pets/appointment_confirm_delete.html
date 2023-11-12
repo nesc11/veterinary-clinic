@@ -1,0 +1,14 @@
+{% extends "pets/_base.html" %}
+
+{% block title %}Remove Appointment{% endblock title %}
+
+{% block content %}
+<section class="container">
+    <h3 class="text-center my-4">Are you sure to delete the data for this appointment?</h3>
+    <form class="text-center" method="post">
+        {% csrf_token %}
+        <input class="btn btn-danger" type="submit" value="Yes, I am sure">
+    </form>
+    <p class="text-center my-4"><a href="{% url "pets:pet-detail" pk=pet.pk %}">No, return to the {{ pet.name }} details</a></p>
+</section>
+{% endblock content %}

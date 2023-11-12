@@ -1,0 +1,62 @@
+{% extends "pets/_base.html" %}
+{% load static %}
+
+{% block title %}Pet{% endblock title %}
+
+{% block script %}
+<script src="{% static "pets/js/pet-detail.js" %}" defer></script>
+{% endblock script %}
+
+{% block content %}
+<section class="container">
+    <h3 class="text-center my-3">Medical record</h3>
+    <p class="text-center"><a href="{% url "pets:pet-vaccinations" pet_pk=pet.pk %}" class="btn btn-primary">Vaccination plan</a></p>
+    <div class="mx-auto d-flex gap-5" id="pet-data" data-id="{{ pet.pk }}">
+        <div>
+            <p><span class="fw-bolder">Owner:</span> <span>{{ pet.owner.first_name|capfirst }} - {{ pet.owner.identification_number }}</span></p>
+            <p><span class="fw-bolder">Name:</span> <span>{{ pet.name|capfirst }}</span></p>
+            <p><span class="fw-bolder">Species:</span> <span>{{ pet.species.name|capfirst }}</span></p>
+            <p><span class="fw-bolder">Breed:</span> <span>{{ pet.breed.name|capfirst }}</span></p>
+        </div>
+        <div>
+            <p><span class="fw-bolder">Fur color:</span> <span>{{ pet.fur_color|capfirst }}</span></p>
+            <p><span class="fw-bolder">Fur length:</span> <span>{{ pet.fur_length|capfirst }}</span></p>
+            <p><span class="fw-bolder">Sterilized:</span> <span>{{ pet.sterilized }}</span></p>
+        </div>
+    </div>
+    <p><a href="{% url "pets:appointment-create" pet.pk %}">Create an appointment</a></p>
+    {% if appointments|length >= 5 %}<h4 class="text-center">Data from the last 5 appointments</h4>{% endif %}
+    <div style="max-height: 500px; width: 100%; max-width: 800px" class="{% if appointments|length < 5 %}d-none{% else %}mx-auto{% endif %}">
+        <canvas id="myChart"></canvas>
+    </div>
+    {% if appointments %}
+    <table class="table table-striped appointment-table" style="width:100%">
+        <thead>
+            <tr>
+                <th>Weight (kg)</th>
+                <th>Temperature (°C)</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for a in appointments %}
+            <tr>
+                <td>{{ a.weight }}</td>
+                <td>{{ a.temperature }}</td>
+                <td>{{ a.created }}</td>
+                <td><a class="btn btn-primary" href="{% url "pets:appointment-detail" pk=a.pk %}">Detail</a></td>
+                <td><a class="btn btn-warning" href="{% url "pets:appointment-update" pk=a.pk %}">Update</a></td>
+                <td><a class="btn btn-danger" href="{% url "pets:appointment-delete" pk=a.pk %}">Delete</a></td>
+            </tr>
+            {% endfor %}
+
+        </tbody>
+    </table>
+    {% else %}
+    <p class="text-center fw-bolder">There are no medical records available for this pet</p>
+    {% endif %}
+    {% if is_paginated %}
+    {% include "pets/pagination/pagination.html" with page_obj=appointments %}
+    {% endif %}
+</section>
+{% endblock content %}

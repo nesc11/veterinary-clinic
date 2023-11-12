@@ -1,0 +1,14 @@
+{% extends "pets/_base.html" %}
+{% load crispy_forms_tags %}
+
+{% block title %}Update vaccination data{% endblock title %}
+
+{% block content %}
+<section class="container">
+    <form class="mx-auto mt-4" style="width: 100%; max-width: 600px" method="post">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <input type="submit" class="btn btn-primary" value="Update">
+    </form>
+</section>
+{% endblock content %}

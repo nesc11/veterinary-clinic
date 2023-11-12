@@ -1,0 +1,27 @@
+{% extends "pets/_base.html" %}
+
+{% block title %}Appointment{% endblock title %}
+
+{% block content %}
+<section class="container">
+    <h3 class="text-center my-4">Appintment data for {{ appointment.pet }}</h3>
+    <section class="mx-auto my-5" style="width: 100%; max-width: 600px">
+        <h4 class="fw-bolder">Data</h4>
+        <div>
+            <p><span class="fw-bolder">Date: </span><span>{{ appointment.created }}</span></p>
+            <p><span class="fw-bolder">Weight (kg): </span><span>{{ appointment.weight }}</span></p>
+            <p><span class="fw-bolder">Nutrition type: </span><span>{{ appointment.nutrition|capfirst }}</span></p>
+            <p><span class="fw-bolder">Temperature (°F): </span><span>{{ appointment.temperature }}</span></p>
+            <p><span class="fw-bolder">Heart rate (bpm): </span><span>{{ appointment.heart_rate }}</span></p>
+            <p><span class="fw-bolder">Breathing Frequency (breaths/min): </span><span>{{ appointment.breathing_frequency }}</span></p>
+            <p><span class="fw-bolder">Threw up: </span><span>{{ appointment.threw_up }}</span></p>
+            <p><span class="fw-bolder">Diarrhea: </span><span>{{ appointment.diarrhea }}</span></p>
+            <div>
+                <p class="fw-bolder">Reason</p>
+                <p>{{ appointment.reason }}</p>
+            </div>
+        </div>
+        <p><a href="{% url "pets:pet-detail" appointment.pet.pk %}">Return to {{ appointment.pet.name }} details</a></p>
+    </section>
+</section>
+{% endblock content %}

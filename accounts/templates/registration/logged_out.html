@@ -1,0 +1,12 @@
+{% extends "pets/_base.html" %}
+
+{% block title %}Logout{% endblock title %}
+
+{% block content %}
+<section class="container text-center">
+    <h3 class="my-4">Logged out</h3>
+    <p>You have successfully logged out.
+        You can <a href="{% url "login" %}">log-in again</a>
+    </p>
+</section>
+{% endblock content %}

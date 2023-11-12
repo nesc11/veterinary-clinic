@@ -1,0 +1,45 @@
+{% extends "pets/_base.html" %}
+
+{% block title %}All Pets{% endblock title %}
+
+{% block content %}
+<section class="container">
+    <h3 class="text-center my-3">Pets</h3>
+    {% if pets %}
+    <table class="table table-striped patients-table" style="width:100%">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Owner</th>
+                <th>breed</th>
+                <th>species</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for p in pets %}
+            <tr>
+                <td><a href="{% url 'pets:pet-detail' p.pk %}">{{ p.name }}</a></td>
+                <td>{{ p.owner.first_name }} - {{ p.owner.identification_number }}</td>
+                <td>{{ p.breed.name }}</td>
+                <td>{{ p.species.name }}</td>
+                <td><a class="text-success" href="{% url 'pets:appointment-create' p.pk %}">New appointment</a></td>
+                <td><a class="btn btn-warning" href="{% url "pets:pet-update" p.pk %}">Update</a></td>
+                <td>
+                    <form action="{% url "pets:pet-delete" p.pk %}" method="post">
+                        {% csrf_token %}
+                        <input type="submit" class="btn btn-danger" value="Remove">
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+
+        </tbody>
+    </table>
+    {% else %}
+    <p class="text-center fw-bolder">There are no pets available</p>
+    {% endif %}
+    {% if is_paginated %}
+    {% include "pets/pagination/pagination.html" %}
+    {% endif %}
+</section>
+{% endblock content %}

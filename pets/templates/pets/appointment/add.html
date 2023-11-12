@@ -1,0 +1,29 @@
+{% extends "pets/base.html" %}
+
+{% block content %}
+<section class="add-owner">
+    <h3>New medical appointment record for {{ pet.name }}</h3>
+    <!-- {% if note %}
+    <div class="alert alert-success" role="alert">
+        {{ note }}
+    </div>
+    {% endif %} -->
+    <form method="post" novalidate>
+        {% csrf_token %}
+        {% for field in form %}
+        {% if field.label == "Diarrhea" or field.label == "Threw up" %}
+        <div class="form-check">
+            {{ field }}
+            <label class="form-check-label" for="flexCheckDefault">
+                {{ field.label }}
+            </label>
+        </div>
+        {% else %}
+        {{ field }}
+        {% endif %}
+        {{ field.errors }}
+        {% endfor %}
+        <button type="submit" class="btn btn-primary">Add new record</button>
+    </form>
+</section>
+{% endblock %}

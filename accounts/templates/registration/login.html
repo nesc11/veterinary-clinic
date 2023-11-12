@@ -1,0 +1,17 @@
+{% extends "pets/_base.html" %}
+{% load crispy_forms_tags %}
+
+{% block title %}Login{% endblock title %}
+
+{% block content %}
+<section class="container">
+    <h3 class="text-center my-4">Login</h3>
+    <form novalidate method="post" style="width: 100%; max-width: 500px" class="mx-auto">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <input type="submit" class="btn btn-primary d-block mx-auto" value="login">
+    </form>
+    <p class="text-center my-4"><a href="{% url "password_reset" %}">Forgotten your password?</a></p>
+</section>
+<p class="text-center my-4">Don't have an account yet?  <a href="{% url "register" %}">Create one</a></p>
+{% endblock content %}

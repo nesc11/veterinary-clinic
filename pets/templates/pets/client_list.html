@@ -1,0 +1,44 @@
+{% extends "pets/_base.html" %}
+
+{% block title %}All Clients{% endblock title %}
+
+{% block content %}
+<section class="container">
+    <h3 class="text-center my-3">Clients</h3>
+    {% if clients %}
+    <table id="example" class="table table-striped patients-table" style="width:100%">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Identification number</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for c in clients %}
+            <tr>
+                <td><a href="{{ c.get_absolute_url }}">{{ c.first_name }}</a></td>
+                <td>{{ c.last_name }}</td>
+                <td>{{ c.email }}</td>
+                <td>{{ c.identification_number }}</td>
+                <td><a class="btn btn-warning" href="{% url "pets:client-update" c.pk %}">Update</a></td>
+                <td>
+                    <form action="{% url "pets:client-delete" c.pk %}" method="post">
+                        {% csrf_token %}
+                        <input type="submit" class="btn btn-danger" value="Remove">
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+
+        </tbody>
+    </table>
+    {% else %}
+    <p class="text-center fw-bolder">There are no clients registered yet</p>
+    {% endif %}
+    {% if is_paginated %}
+    {% include "pets/pagination/pagination.html" %}
+    {% endif %}
+</section>
+{% endblock content %}

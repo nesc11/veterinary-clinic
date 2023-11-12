@@ -1,0 +1,73 @@
+{% extends "pets/_base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+
+{% block title %}{{ pet.name }}'s Vaccinations{% endblock title %}
+
+{% comment %} {% block script %}
+<script defer src="{% static "pets/js/vaccines.js" %}"></script>
+{% endblock script %} {% endcomment %}
+
+{% block content %}
+<main>
+    <section class="container">
+        {% if form.errors %}
+        <div class="alert alert-danger mt-2 text-center" role="alert">
+            Something is wrong with the form, Chek it out!
+        </div>
+        {% endif %}
+        <h3 class="text-center my-4">{{ pet.name }}'s Vaccinations</h3>
+        {% if vaccinations %}
+        {% for v in vaccinations %}
+        <div class="card mx-auto mb-4" style="width:100%; max-width: 600px">
+            <div class="card-header">
+              {{ v.vaccine.name }}
+            </div>
+            <div class="card-body">
+              {% comment %} <h5 class="card-title">Special title treatment</h5> {% endcomment %}
+              <p class="card-text">
+                <span class="fw-bolder">Vaccine application date: </span><span>{{ v.date }}</span>
+              </p>
+              <p class="card-text">
+                <span class="fw-bolder">Date of next vaccine: </span><span>{{ v.next_date }}</span>
+              </p>
+              <div class="d-flex gap-2">
+                <form method="post" action="{% url "pets:pet-vaccinations-delete" pet_pk=pet.pk vaccination_pk=v.pk %}">
+                    {% csrf_token %}
+                    <input class="btn btn-danger" type="submit" value="Delete">
+                  </form>
+                  <a href="{% url "pets:pet-vaccinations-update" pet_pk=pet.pk vaccination_pk=v.pk %}" class="btn btn-primary">Update</a>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+        {% else %}
+        <p class="text-center fw-bolder">There are no vaccinations for this pet</p>
+        {% endif %}
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary d-block mx-auto" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            New Vaccination
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Add vaccination</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                <form method="post" novalidate>
+                    {% csrf_token %}
+                    {{ form|crispy }}
+                    <input type="submit" class="btn btn-primary" value="Add">
+                </form>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock content %}
+

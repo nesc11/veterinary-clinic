@@ -1,0 +1,15 @@
+{% extends "pets/_base.html" %}
+{% load crispy_forms_tags %}
+
+{% block title %}Register{% endblock title %}
+
+{% block content %}
+<section class="container">
+    <h3 class="text-center mt-4">Register</h3>
+    <form novalidate method="post" style="width: 100%; max-width: 500px" class="mx-auto">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <input type="submit" class="btn btn-primary d-block mx-auto" value="Register">
+    </form>
+</section>
+{% endblock content %}

@@ -1,0 +1,123 @@
+[
+  {
+    "model": "pets.client",
+    "pk": 1,
+    "fields": {
+      "first_name": "John",
+      "last_name": "Doe",
+      "email": "john.doe@example.com",
+      "identification_number": "1234567890",
+      "home_address": "123 Main St, City"
+    }
+  },
+  {
+    "model": "pets.client",
+    "pk": 2,
+    "fields": {
+      "first_name": "Jane",
+      "last_name": "Smith",
+      "email": "jane.smith@example.com",
+      "identification_number": "0987654321",
+      "home_address": "456 Elm St, Town"
+    }
+  },
+  {
+    "model": "pets.client",
+    "pk": 3,
+    "fields": {
+      "first_name": "Alice",
+      "last_name": "Johnson",
+      "email": "alice.j@example.com",
+      "identification_number": "9876543219",
+      "home_address": "789 Oak St, Village"
+    }
+  },
+  {
+    "model": "pets.client",
+    "pk": 4,
+    "fields": {
+      "first_name": "David",
+      "last_name": "Brown",
+      "email": "david.b@example.com",
+      "identification_number": "4567890123",
+      "home_address": "101 Pine St, Suburb"
+    }
+  },
+  {
+    "model": "pets.client",
+    "pk": 5,
+    "fields": {
+      "first_name": "Ella",
+      "last_name": "Garcia",
+      "email": "ella.g@example.com",
+      "identification_number": "6543210987",
+      "home_address": "222 Cedar St, County"
+    }
+  },
+  {
+    "model": "pets.client",
+    "pk": 6,
+    "fields": {
+      "first_name": "Michael",
+      "last_name": "Wilson",
+      "email": "michael.w@example.com",
+      "identification_number": "1231231231",
+      "home_address": "333 Birch St, State"
+    }
+  },
+  {
+    "model": "pets.client",
+    "pk": 7,
+    "fields": {
+      "first_name": "Olivia",
+      "last_name": "Taylor",
+      "email": "olivia.t@example.com",
+      "identification_number": "5555555555",
+      "home_address": "444 Maple St, Province"
+    }
+  },
+  {
+    "model": "pets.client",
+    "pk": 8,
+    "fields": {
+      "first_name": "William",
+      "last_name": "Martin",
+      "email": "william.m@example.com",
+      "identification_number": "9876543210",
+      "home_address": "555 Oak St, Region"
+    }
+  },
+  {
+    "model": "pets.client",
+    "pk": 9,
+    "fields": {
+      "first_name": "Ava",
+      "last_name": "Anderson",
+      "email": "ava.a@example.com",
+      "identification_number": "4561237890",
+      "home_address": "666 Elm St, Territory"
+    }
+  },
+  {
+    "model": "pets.client",
+    "pk": 10,
+    "fields": {
+      "first_name": "James",
+      "last_name": "Jackson",
+      "email": "james.j@example.com",
+      "identification_number": "1112223334",
+      "home_address": "777 Spruce St, District"
+    }
+  },
+  {
+    "model": "pets.client",
+    "pk": 11,
+    "fields": {
+      "first_name": "Sophia",
+      "last_name": "White",
+      "email": "sophia.w@example.com",
+      "identification_number": "9990001110",
+      "home_address": "888 Cedar St, County"
+    }
+  }
+]

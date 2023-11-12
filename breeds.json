@@ -1,0 +1,74 @@
+[
+    {
+        "model": "pets.breed",
+        "pk": 1,
+        "fields": {
+            "name": "Golden Retriever",
+            "species": 1
+        }
+    },
+    {
+        "model": "pets.breed",
+        "pk": 2,
+        "fields": {
+            "name": "Labrador Retriever",
+            "species": 1
+        }
+    },
+    {
+        "model": "pets.breed",
+        "pk": 3,
+        "fields": {
+            "name": "Siamese",
+            "species": 2
+        }
+    },
+    {
+        "model": "pets.breed",
+        "pk": 4,
+        "fields": {
+            "name": "Persian",
+            "species": 2
+        }
+    },
+    {
+        "model": "pets.breed",
+        "pk": 5,
+        "fields": {
+            "name": "Parrot",
+            "species": 3
+        }
+    },
+    {
+        "model": "pets.breed",
+        "pk": 6,
+        "fields": {
+            "name": "Cockatiel",
+            "species": 3
+        }
+    },
+    {
+        "model": "pets.breed",
+        "pk": 7,
+        "fields": {
+            "name": "Poodle",
+            "species": 1
+        }
+    },
+    {
+        "model": "pets.breed",
+        "pk": 8,
+        "fields": {
+            "name": "Maine Coon",
+            "species": 2
+        }
+    },
+    {
+        "model": "pets.breed",
+        "pk": 9,
+        "fields": {
+            "name": "Bulldog",
+            "species": 1
+        }
+    }
+]

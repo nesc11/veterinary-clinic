@@ -1,0 +1,162 @@
+[
+    {
+        "model": "pets.pet",
+        "pk": 1,
+        "fields": {
+            "name": "Max",
+            "birthdate": "2019-05-15",
+            "fur_color": "Golden",
+            "fur_length": "Medium",
+            "sterilized": false,
+            "breed": 1,
+            "species": 1,
+            "owner": 1,
+            "created": "2023-10-31T00:00:00Z",
+            "updated": "2023-10-31T00:00:00Z"
+        }
+    },
+    {
+        "model": "pets.pet",
+        "pk": 2,
+        "fields": {
+            "name": "Whiskers",
+            "birthdate": "2020-07-10",
+            "fur_color": "White",
+            "fur_length": "Short",
+            "sterilized": true,
+            "breed": 4,
+            "species": 2,
+            "owner": 2,
+            "created": "2023-10-31T00:00:00Z",
+            "updated": "2023-10-31T00:00:00Z"
+        }
+    },
+    {
+        "model": "pets.pet",
+        "pk": 3,
+        "fields": {
+            "name": "Polly",
+            "birthdate": "2018-12-05",
+            "fur_color": "Green",
+            "fur_length": "Feathers",
+            "sterilized": false,
+            "breed": 5,
+            "species": 3,
+            "owner": 3,
+            "created": "2023-10-31T00:00:00Z",
+            "updated": "2023-10-31T00:00:00Z"
+        }
+    },
+    {
+        "model": "pets.pet",
+        "pk": 4,
+        "fields": {
+            "name": "Buddy",
+            "birthdate": "2020-02-20",
+            "fur_color": "Black",
+            "fur_length": "Medium",
+            "sterilized": true,
+            "breed": 2,
+            "species": 1,
+            "owner": 4,
+            "created": "2023-10-31T00:00:00Z",
+            "updated": "2023-10-31T00:00:00Z"
+        }
+    },
+    {
+        "model": "pets.pet",
+        "pk": 5,
+        "fields": {
+            "name": "Luna",
+            "birthdate": "2019-08-30",
+            "fur_color": "Tabby",
+            "fur_length": "Short",
+            "sterilized": false,
+            "breed": 6,
+            "species": 3,
+            "owner": 5,
+            "created": "2023-10-31T00:00:00Z",
+            "updated": "2023-10-31T00:00:00Z"
+        }
+    },
+    {
+        "model": "pets.pet",
+        "pk": 6,
+        "fields": {
+            "name": "Kiwi",
+            "birthdate": "2020-06-10",
+            "fur_color": "Green",
+            "fur_length": "Feathers",
+            "sterilized": false,
+            "breed": 7,
+            "species": 1,
+            "owner": 6,
+            "created": "2023-10-31T00:00:00Z",
+            "updated": "2023-10-31T00:00:00Z"
+        }
+    },
+    {
+        "model": "pets.pet",
+        "pk": 7,
+        "fields": {
+            "name": "Rocky",
+            "birthdate": "2020-03-15",
+            "fur_color": "Brown",
+            "fur_length": "Short",
+            "sterilized": true,
+            "breed": 3,
+            "species": 2,
+            "owner": 7,
+            "created": "2023-10-31T00:00:00Z",
+            "updated": "2023-10-31T00:00:00Z"
+        }
+    },
+    {
+        "model": "pets.pet",
+        "pk": 8,
+        "fields": {
+            "name": "Milo",
+            "birthdate": "2021-01-20",
+            "fur_color": "Gray",
+            "fur_length": "Medium",
+            "sterilized": false,
+            "breed": 8,
+            "species": 2,
+            "owner": 8,
+            "created": "2023-10-31T00:00:00Z",
+            "updated": "2023-10-31T00:00:00Z"
+        }
+    },
+    {
+        "model": "pets.pet",
+        "pk": 9,
+        "fields": {
+            "name": "Buddy",
+            "birthdate": "2019-12-15",
+            "fur_color": "Golden",
+            "fur_length": "Medium",
+            "sterilized": true,
+            "breed": 9,
+            "species": 1,
+            "owner": 9,
+            "created": "2023-10-31T00:00:00Z",
+            "updated": "2023-10-31T00:00:00Z"
+        }
+    },
+    {
+        "model": "pets.pet",
+        "pk": 10,
+        "fields": {
+            "name": "Simba",
+            "birthdate": "2018-07-01",
+            "fur_color": "Orange",
+            "fur_length": "Medium",
+            "sterilized": false,
+            "breed": 1,
+            "species": 1,
+            "owner": 10,
+            "created": "2023-10-31T00:00:00Z",
+            "updated": "2023-10-31T00:00:00Z"
+        }
+    }
+]
